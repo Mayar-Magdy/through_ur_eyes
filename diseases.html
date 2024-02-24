@@ -1,0 +1,905 @@
+<!-- START BASEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BLOCK1 -->
+    {% block content %}
+    <link rel="stylesheet" href="{%static 'static/css/chat.css'%}" />
+    <link rel="stylesheet" href="{%static 'static/css/home.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{%static 'assets/css/all.min.css'%}" />
+    <link rel="stylesheet" href="{%static 'assets/css/diseases.css'%}" />
+    {%endblock%}
+    <!-- END BLOCK1 -->
+
+    <!-- Links Of CSS File -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/remixicon.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="assets/css/odometer.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <!-- Title -->
+    <title>Through Ur Eyes</title>
+  </head>
+
+  <body class="body-bg-color">
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+      <button id="chat-button" type="button" class="collapsible">
+        Chat with us!
+        <i
+          id="chat-icon"
+          style="color: #fff"
+          class="fa fa-fw fa-comments-o"
+        ></i>
+      </button>
+
+      <div class="content">
+        <div class="full-chat-block">
+          <!-- Message Container -->
+          <div class="outer-container">
+            <div class="chat-container">
+              <!-- Messages -->
+              <div id="chatbox">
+                <h5 id="chat-timestamp"></h5>
+                <p id="botStarterMessage" class="botText">
+                  <span>Loading...</span>
+                </p>
+              </div>
+
+              <!-- User input box -->
+              <div class="chat-bar-input-block">
+                <div id="userInput">
+                  <input
+                    id="textInput"
+                    class="input-box"
+                    type="text"
+                    name="msg"
+                    placeholder="Tap 'Enter' to send a message"
+                  />
+                  <p></p>
+                </div>
+
+                <div class="chat-bar-icons">
+                  <i
+                    id="chat-icon"
+                    style="color: crimson"
+                    class="fa fa-fw fa-heart"
+                    onclick="heartButton()"
+                  ></i>
+                  <i
+                    id="chat-icon"
+                    style="color: #333"
+                    class="fa fa-fw fa-send"
+                    onclick="sendButton()"
+                  ></i>
+                </div>
+              </div>
+
+              <div id="chat-bar-bottom">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Start Preloader Area -->
+    <div class="preloader" id="loader-style">
+      <div class="preloader-wrap">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <!-- Start Navbar Area -->
+    <div class="fixed-top">
+      <div class="navbar-area bg-transparent">
+        <div class="mobile-responsive-nav">
+          <div class="container">
+            <div class="mobile-responsive-menu">
+              <div class="logo">
+                <a href="index-2.html">
+                  <img
+                    src="assets/images/logo.png"
+                    class="main-logo"
+                    alt="logo"
+                  />
+                  <img
+                    src="assets/images/white-logo.png"
+                    class="white-logo"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="desktop-nav">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-light">
+              <a class="navbar-brand" href="index-2.html">
+                <img
+                  src="assets/images/logo.png"
+                  class="main-logo"
+                  alt="logo"
+                />
+                <img
+                  src="assets/images/white-logo.png"
+                  class="white-logo"
+                  alt="logo"
+                />
+              </a>
+
+              <div
+                class="collapse navbar-collapse mean-menu"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="index-2.html" class="nav-link">Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="diseases.html" class="nav-link active"
+                      >Diseases
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle"> Resources </a>
+
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a href="our-doctors.html" class="nav-link">Our Team</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a href="faq.html" class="nav-link">FAQ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="how-we-help.html" class="nav-link"
+                          >How We Help</a
+                        >
+                      </li>
+
+                      <li class="nav-item">
+                        <a href="privacy-policy.html" class="nav-link"
+                          >Privacy Policy</a
+                        >
+                      </li>
+
+                      <li class="nav-item">
+                        <a href="terms-conditions.html" class="nav-link"
+                          >Terms And Conditions</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="contact-us.html" class="nav-link">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle"> User </a>
+
+                    <ul class="dropdown-menu">
+                      <li id="login-nav" class="nav-item">
+                        <a href="login.html" class="nav-link">Login</a>
+                      </li>
+
+                      <li id="register-nav" class="nav-item">
+                        <a href="register.html" class="nav-link">Register</a>
+                      </li>
+                      <li
+                        id="logout-nav"
+                        class="nav-item"
+                        style="display: none"
+                      >
+                        <a
+                          onclick="setNav()"
+                          href="index-2.html"
+                          class="nav-link"
+                          >Logout</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- <li class="nav-item mx-2" style="margin-top: -5px">
+                    <button class="btn btn-outline-primary">Login</button>
+                  </li>
+                  <li class="nav-item" style="margin-top: -5px">
+                    <button class="btn btn-outline-primary">Register</button>
+                  </li> -->
+                </ul>
+
+                <div
+                  class="others-options"
+                  style="display: flex; justify-content: flex-end; flex: 1"
+                >
+                  <ul>
+                    <li id="call">
+                      <a href="tel:+1(135)-1984-2020" class="call-us">
+                        <i class="ri-phone-line"></i>
+                        <span id="span-137">137</span>
+                      </a>
+                    </li>
+                    <li>
+                      <h3 id="user-nav"></h3>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div class="others-option-for-responsive">
+          <div class="container">
+            <div class="dot-menu">
+              <div class="inner">
+                <div class="circle circle-one"></div>
+                <div class="circle circle-two"></div>
+                <div class="circle circle-three"></div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="option-inner">
+                <div
+                  class="others-options justify-content-center d-flex align-items-center"
+                >
+                  <ul>
+                    <li>
+                      <h3>Hello Zozza</h3>
+                    </li>
+                    <li>
+                      <a href="tel:+1(135)-1984-2020" class="call-us">
+                        <i class="ri-phone-line"></i>
+                        <span>+1(135) 1984 2020</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Navbar Area -->
+
+    <!-- BLOCK2 -->
+    {% block extra_content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area">
+      <div class="container">
+        <div class="page-title-content">
+          <h2>Diseases</h2>
+
+          <ul>
+            <li>
+              <a href="index-2.html"> Home </a>
+            </li>
+
+            <li class="active">Diseases</li>
+          </ul>
+        </div>
+      </div>
+
+      <img
+        src="{%static 'assets/images/page-shape-1.png'%}"
+        class="shape page-shape-1"
+        alt="Image"
+      />
+      <img
+        src="{%static 'assets/images/page-shape-2.png'%}"
+        class="shape page-shape-2"
+        alt="Image"
+      />
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- start diesases -->
+    <!-- start upload image -->
+    <div class="container">
+      <div class="row justify-content-center text-primary">
+        <div class="col-lg-4 col-sm-8 my-3">
+          <input type="file" id="file" accept="image/*" hidden />
+          <div class="img-area" data-img="">
+            <i class="bx bxs-cloud-upload icon"></i>
+            <h3 class="text-success">upload Retina Image</h3>
+            <p class="text-success">
+              Image size must be less than <span>2MB</span>
+            </p>
+          </div>
+          <button class="select-image">Select Image</button>
+        </div>
+        <div class="col-lg-4 col-sm-8 my-3">
+          <input type="file" id="file2" accept="image/*" hidden />
+          <div class="img-area img-area2" data-img="">
+            <i class="bx bxs-cloud-upload icon"></i>
+            <h3 class="text-success">upload Eye Lid Image</h3>
+            <p class="text-success">
+              Image size must be less than <span>2MB</span>
+            </p>
+          </div>
+          <button class="select-image select-image2">Select Image</button>
+        </div>
+      </div>
+    </div>
+    <!-- end upload image -->
+    <!-- start result -->
+    <div
+      class="d-flex justify-content-center my-3"
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+    >
+      <button
+        type="button"
+        class="btn btn-success btn-lg rounded-pill"
+        id="show-tips"
+      >
+        Get Result
+      </button>
+    </div>
+    <!-- start modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-success" id="staticBackdropLabel">
+              Result
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h2 id="health-ratio">12.7 <sub>gdl</sub><sup>-1</sup></h2>
+            <h3 id="health">Anemia</h3>
+            <p class="tips">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              aut quo alias quam, nostrum voluptatem laudantium in porro illo
+              iste atque harum sunt enim, accusamus totam perspiciatis aliquam.
+              Perspiciatis, maiores!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              id="show-doctor-box"
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Understood
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+    <!-- start find doctor -->
+    <div class="find-doctor" style="display: none">
+      <div class="container">
+        <div class="main-heading">
+          <h2 class="text-primary">Find The Nearest Doctor</h2>
+        </div>
+        <div class="d-flex justify-content-center my-3">
+          <button
+            type="button"
+            class="btn btn-success btn-lg rounded-pill"
+            onclick="getLocation()"
+          >
+            Access Your Location
+          </button>
+          <p id="demo" class="text-primary" style="display: none"></p>
+        </div>
+        <div class="doctor-box my-3 p-3 docs" style="display: none">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm 12">
+              <ul class="card">
+                <li class="card-header">
+                  <h2 class="card-header-title">Dr.Mahmoud</h2>
+
+                  <ul class="card-header-status list-inline">
+                    <li class="win">
+                      <span class="open-status">False</span>
+                      <span class="open"></span>
+                      <span class="open-close">Closed</span>
+                    </li>
+                    <li class="win">
+                      <div class="rating">
+                        <p class="rating-num">Rating: <b>4</b></p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                    </li>
+                    <!-- <li class="loss">-343,014</li> -->
+                  </ul>
+                </li>
+
+                <li class="card-item card-loss">
+                  <h3 class="card-title text-success">Address</h3>
+
+                  <p class="card-info">
+                    <i
+                      class="fa-solid fa-location-dot"
+                      style="font-size: 25px"
+                    ></i>
+                    Mesalla St.
+                  </p>
+
+                  <div class="show-btn-location">
+                    <ul class="list-inline card-menu left">
+                      <li class="card-menu-item">wanna location</li>
+                    </ul>
+
+                    <h4 class="card-price right">Find Here</h4>
+                  </div>
+                  <div class="btn-location-div">
+                    <button class="btn btn-danger btn-location-btn">
+                      Doctor Location
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm 12">
+              <ul class="card">
+                <li class="card-header">
+                  <h2 class="card-header-title">Dr.Mahmoud</h2>
+
+                  <ul class="card-header-status list-inline">
+                    <li class="win">
+                      <span class="open-status">False</span>
+                      <span class="open"></span>
+                      <span class="open-close">Closed</span>
+                    </li>
+                    <li class="win">
+                      <div class="rating">
+                        <p class="rating-num">Rating: <b>4</b></p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                    </li>
+                    <!-- <li class="loss">-343,014</li> -->
+                  </ul>
+                </li>
+
+                <li class="card-item card-loss">
+                  <h3 class="card-title text-success">Address</h3>
+
+                  <p class="card-info">
+                    <i
+                      class="fa-solid fa-location-dot"
+                      style="font-size: 25px"
+                    ></i>
+                    Mesalla St.
+                  </p>
+
+                  <div class="show-btn-location">
+                    <ul class="list-inline card-menu left">
+                      <li class="card-menu-item">wanna location</li>
+                    </ul>
+
+                    <h4 class="card-price right">Find Here</h4>
+                  </div>
+                  <div class="btn-location-div">
+                    <button class="btn btn-danger btn-location-btn">
+                      Doctor Location
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm 12">
+              <ul class="card">
+                <li class="card-header">
+                  <h2 class="card-header-title">Dr.Mahmoud</h2>
+
+                  <ul class="card-header-status list-inline">
+                    <li class="win">
+                      <span class="open-status">False</span>
+                      <span class="open"></span>
+                      <span class="open-close">Closed</span>
+                    </li>
+                    <li class="win">
+                      <div class="rating">
+                        <p class="rating-num">Rating: <b>4</b></p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                    </li>
+                    <!-- <li class="loss">-343,014</li> -->
+                  </ul>
+                </li>
+
+                <li class="card-item card-loss">
+                  <h3 class="card-title text-success">Address</h3>
+
+                  <p class="card-info">
+                    <i
+                      class="fa-solid fa-location-dot"
+                      style="font-size: 25px"
+                    ></i>
+                    Mesalla St.
+                  </p>
+
+                  <div class="show-btn-location">
+                    <ul class="list-inline card-menu left">
+                      <li class="card-menu-item">wanna location</li>
+                    </ul>
+
+                    <h4 class="card-price right">Find Here</h4>
+                  </div>
+                  <div class="btn-location-div">
+                    <button class="btn btn-danger btn-location-btn">
+                      Doctor Location
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="doc-map">
+            <div class="main-heading">
+              <h2 class="text-primary">The Location Is</h2>
+            </div>
+            <!-- <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27831.082245363366!2d30.89092432568359!3d29.315040600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1459794342f33e89%3A0xa31f3dd539055701!2sDr%20Mahmoud%20Osama%20Zayed!5e0!3m2!1sar!2seg!4v1685785328826!5m2!1sar!2seg"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe> -->
+            <div
+              class="sec2map"
+              style="overflow: hidden; height: 550px; width: 100%"
+            >
+              <div id="gmap_canvas" style="height: 100%; width: 100%"></div>
+              <div>
+                <small
+                  ><a href="http://embedgooglemaps.com">
+                    embed google maps
+                  </a></small
+                >
+              </div>
+              <div>
+                <small
+                  ><a href="http://freedirectorysubmissionsites.com/"
+                    >free web directories</a
+                  ></small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end find doctor -->
+    <!-- end result -->
+    <!-- end diesases -->
+    {%endblock %}
+    <!-- END BLOCK2 -->
+
+    <!-- Start Subscribe Area -->
+    <div class="subscribe-area">
+      <div class="container">
+        <div class="subscribe-bg bg-color-3270ff wow fadeInUp delay-0-2s">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="subscribe-content">
+                <h2>Subscribe to the updates!</h2>
+                <p>
+                  Sign up to our newsletter and be the first to know about the
+                  latest news.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="newsletter-wrap">
+                <form class="newsletter-form" data-toggle="validator">
+                  <input
+                    id="valid-email"
+                    type="email"
+                    class="form-control"
+                    placeholder="Your email address"
+                    name="EMAIL"
+                    autocomplete="off"
+                    required
+                  />
+
+                  <!-- <button class="default-btn" type="submit">Subscribe</button> -->
+                  <input
+                    id="valid-btn"
+                    class="default-btn"
+                    type="submit"
+                    value="Subscribe"
+                  />
+
+                  <div id="validator-newsletter" class="form-result"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <img
+            src="assets/images/subscribe-shape.png"
+            class="subscribe-shape"
+            alt="Image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- End Subscribe Area -->
+    <!-- END BLOCK CONTENT -->
+
+    <!-- Start Footer Area -->
+    <div class="footer-area bg-color-ffffff pt-100 pb-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="single-footer-widget wow fadeInUp delay-0-2s">
+              <a href="index-2.html">
+                <img
+                  src="assets/images/logo.png"
+                  class="main-logo"
+                  alt="Image"
+                />
+                <img
+                  src="assets/images/white-logo.png"
+                  class="white-logo"
+                  alt="Image"
+                />
+              </a>
+
+              <p>
+                If you would like more information about our project and how
+                they could benefit you please feel free to contact us.
+              </p>
+
+              <ul class="social-link">
+                <li>
+                  <a href="https://facebook.com/" target="_blank">
+                    <i class="ri-facebook-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/" target="_blank">
+                    <i class="ri-twitter-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://linkedin.com/" target="_blank">
+                    <i class="ri-linkedin-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/" target="_blank">
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="single-footer-widget wow fadeInUp delay-0-4s">
+              <h3>Contacts Info</h3>
+
+              <ul class="contact-info">
+                <li>
+                  <span>Address:</span>
+                  Egypt cairo, M2 080522
+                </li>
+                <li>
+                  <span>Phone:</span>
+                  <a href="tel:+20137">137</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="single-footer-widget wow fadeInUp delay-0-6s">
+              <h3>Quick Link</h3>
+
+              <ul class="help-link">
+                <li>
+                  <a href="about.html">About Us</a>
+                </li>
+                <li>
+                  <a href="faq.html">FAQ</a>
+                </li>
+                <li>
+                  <a href="contact-us.html">Contact Us</a>
+                </li>
+                <li>
+                  <a href="privacy-policy.html">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="terms-conditions.html">Terms of Use</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="single-footer-widget wow fadeInUp delay-0-8s">
+              <h3>Subscribe to the updates!</h3>
+              <p>
+                Sign up to our newsletter and be the first to know about the
+                latest news.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer Area -->
+
+    <!-- Start Copyright Area -->
+    <div class="copy-right-area bg-color-ffffff">
+      <div class="container">
+        <div class="copy-right-bg">
+          <div class="row align-items-center wow fadeInLeft delay-0-2s">
+            <div class="col-lg-6">
+              <p>
+                Copyright @<span id="year"></span>Through Ur Eyes Team. All
+                Rights Reserved by
+                <a href="#" target="_blank">Through Ur Eyes Team</a>
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="language wow fadeInRight delay-0-2s">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Language</option>
+                  <option value="1">English</option>
+                </select>
+                <i class="ri-global-line"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Copyright Area -->
+
+    <!-- Start Go Top Area -->
+    <div class="go-top">
+      <i class="ri-arrow-up-s-fill"></i>
+      <i class="ri-arrow-up-s-fill"></i>
+    </div>
+    <!-- End Go Top Area -->
+
+    <!-- Links of JS File -->
+    <script
+      data-cfasync="false"
+      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/meanmenu.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/appear.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/form-validator.min.js"></script>
+    <script src="assets/js/contact-form-script.js"></script>
+    <script src="assets/js/ajaxchimp.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="static/scripts/responses.js"></script>
+    <!-- END BASEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
+    <!-- START BLOCK CONTENT -->
+    {% block extra_content1 %}
+    <script src="{%static 'static/scripts/chat.js'%}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyU6oAKtHYEnig-ld76_8BzW29IEETt5E&callback=initMap&v=weekly&channed=2"></script>
+    <script type="text/javascript">
+      function init_map() {
+        var myOptions = {
+          zoom: 14,
+          center: new google.maps.LatLng(29.31247185136865, 30.882404784697382),
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        };
+        map = new google.maps.Map(
+          document.getElementById("gmap_canvas"),
+          myOptions
+        );
+        marker = new google.maps.Marker({
+          map: map,
+          position: new google.maps.LatLng(
+            29.31247185136865,
+            30.882404784697382
+          ),
+        });
+        infowindow = new google.maps.InfoWindow({
+          content: "<strong>My Location</strong><br>in my heart<br>",
+        });
+        google.maps.event.addListener(marker, "click", function () {
+          infowindow.open(map, marker);
+        });
+        infowindow.open(map, marker);
+      }
+      google.maps.event.addDomListener(window, "load", init_map);
+    </script>
+    <script src="{%static 'assets/js/diseases.js'%}"></script>
+    {% endblock %}
+    <!-- END BLOCK CONTENT -->
+  </body>
+</html>

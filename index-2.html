@@ -39,57 +39,56 @@
 		<link rel="icon" type="icon" href="assets/images/favicon.png">
 		
     </head>
-	<!-- CHAT BAR BLOCK -->
-    <div class="chat-bar-collapsible">
-        <button id="chat-button" type="button" class="collapsible">Chat with us!
-            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
-        </button>
-
-        <div class="content">
-            <div class="full-chat-block">
-                <!-- Message Container -->
-                <div class="outer-container">
-                    <div class="chat-container">
-                        <!-- Messages -->
-                        <div id="chatbox">
-                            <h5 id="chat-timestamp"></h5>
-                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
-                        </div>
-
-                        <!-- User input box -->
-                        <div class="chat-bar-input-block">
-                            <div id="userInput">
-                                <input id="textInput" class="input-box" type="text" name="msg"
-                                    placeholder="Tap 'Enter' to send a message">
-                                <p></p>
-                            </div>
-
-                            <div class="chat-bar-icons">
-                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
-                                    onclick="heartButton()"></i>
-                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
-                                    onclick="sendButton()"></i>
-                            </div>
-                        </div>
-
-                        <div id="chat-bar-bottom">
-                            <p></p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
+	
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="static/scripts/responses.js"></script>
-<script src="static/scripts/chat.js"></script>
+
 
     <body class="body-bg-color">
+		<!-- CHAT BAR BLOCK -->
+		<div class="chat-bar-collapsible">
+			<button id="chat-button" type="button" class="collapsible">Chat with us!
+				<i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+			</button>
+	
+			<div class="content">
+				<div class="full-chat-block">
+					<!-- Message Container -->
+					<div class="outer-container">
+						<div class="chat-container">
+							<!-- Messages -->
+							<div id="chatbox">
+								<h5 id="chat-timestamp"></h5>
+								<p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+							</div>
+	
+							<!-- User input box -->
+							<div class="chat-bar-input-block">
+								<div id="userInput">
+									<input id="textInput" class="input-box" type="text" name="msg"
+										placeholder="Tap 'Enter' to send a message">
+									<p></p>
+								</div>
+	
+								<div class="chat-bar-icons">
+									<i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+										onclick="heartButton()"></i>
+									<i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+										onclick="sendButton()"></i>
+								</div>
+							</div>
+	
+							<div id="chat-bar-bottom">
+								<p></p>
+							</div>
+	
+						</div>
+					</div>
+	
+				</div>
+			</div>
+	
+		</div>
 		<!-- Start Preloader Area -->
 		<div class="preloader" id="loader-style">
 			<div class="preloader-wrap">
@@ -139,11 +138,11 @@
 										<a href="services.html" class="nav-link">Services </a>
 									</li>
 	
-                                    <li class="nav-item">
-                                        <a href="diseases.html" class="nav-link "
-                                          >Diseases
-                                        </a>
-                                      </li>
+									<li class="nav-item">
+										<a href="diseases.html" class="nav-link "
+										  >Diseases
+										</a>
+									  </li>
 									<li class="nav-item">
 										<a href="#" class="nav-link dropdown-toggle">
 											Resources 
@@ -256,7 +255,7 @@
 							<p class="porttitor wow fadeInUp delay-0-6s">The project aims to support the 100 Million Health Initiative by using artificial intelligence to identify diabetes, pressure, and anemia diseases through the image of the patient's eye and retina.</p>
 
 							<div class="banner-btn wow fadeInUp delay-0-8s">
-								<a href="plans-pricing.html" class="default-btn">
+								<a href="diseases.html" class="default-btn">
 									Get Started
 								</a>
 								<a href="https://www.youtube.com/watch?v=e9iGF8rg1YM" class="video-btn popup-youtube">
@@ -759,6 +758,10 @@
 		<script src="assets/js/contact-form-script.js"></script>
 		<script src="assets/js/ajaxchimp.min.js"></script>
 		<script src="assets/js/custom.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="static/scripts/responses.js"></script>
+		<script src="static/scripts/chat.js"></script>
     </body>
 
 
