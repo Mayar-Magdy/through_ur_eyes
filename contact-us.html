@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    <!-- BLOCK1 -->
+    {% block content %}
+    <link rel="stylesheet" href="{%static 'static/css/chat.css'%}" />
+    <link rel="stylesheet" href="{%static 'static/css/home.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    {%endblock%}
+    <!-- END BLOCK1 -->
+
+   
+
+    <!-- BLOCK2 -->
+    {% block extra_content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area">
+      <div class="container">
+        <div class="page-title-content">
+          <h2>Contact Us</h2>
+
+          <ul>
+            <li>
+              <a href="{%url 'home'%}"> Home </a>
+            </li>
+
+            <li class="active">Contact Us</li>
+          </ul>
+        </div>
+      </div>
+
+      <img
+        src="{%static 'assets/images/page-shape-1.png'%}"
+        class="shape page-shape-1"
+        alt="Image"
+      />
+      <img
+        src="{%static 'assets/images/page-shape-2.png'%}"
+        class="shape page-shape-2"
+        alt="Image"
+      />
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Start Contact Info Title Area -->
+    <div class="contact-info-area pt-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-3">
+            <div class="info-content">
+              <h3>Contacts Info</h3>
+              <ul>
+                <li>
+                  <span>Address:</span>
+                  Egypt , Fayoum
+                </li>
+                <li>
+                  <span>Phone:</span>
+                  <a href="tel:+1(135)-1984-2020">137</a>
+                </li>
+                <li>
+                  <span
+                    >Email:<a href="https://mail.google.com/mail/u/0/#inbox"
+                      >through.ur.eyes</a
+                    ></span
+                  >
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="maps">
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1665.4004212813902!2d30.84409436086511!3d29.308558872709455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1459792fa8bf0013%3A0xa698b3d528236f63!2z2KfZhNmB2YrZiNmF2Iwg2YLYs9mFINin2YTZgdmK2YjZhdiMINin2YTZgdmK2YjZhQ!5e0!3m2!1sar!2seg!4v1687634538251!5m2!1sar!2seg" 
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact Info Title Area -->
+
+    
+    {%endblock %}
+    <!-- END BLOCK CONTENT -->
+
+   
+    <!-- START BLOCK CONTENT -->
+    {% block extra_content1 %}
+    <script src="static/scripts/chat.js"></script>
+    {% endblock %}
+    <!-- END BLOCK CONTENT -->
+  </body>
+</html>

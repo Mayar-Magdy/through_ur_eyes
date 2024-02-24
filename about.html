@@ -1,0 +1,209 @@
+
+{% extends 'base.html' %}
+{% load static %}
+    <!-- BLOCK1 -->
+    {% block content %}
+    <link rel="stylesheet" href="{%static 'static/css/chat.css'%}" />
+    <link rel="stylesheet" href="{%static 'static/css/home.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    {%endblock%}
+    <!-- END BLOCK1 -->
+
+   
+
+    <!-- BLOCK2 -->
+    {% block extra_content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area">
+      <div class="container">
+        <div class="page-title-content">
+          <h2>About Us</h2>
+
+          <ul>
+            <li>
+              <a href="{%url 'home'%}"> Home </a>
+            </li>
+
+            <li class="active">About Us</li>
+          </ul>
+        </div>
+      </div>
+
+      <img
+        src="{%static 'assets/images/page-shape-1.png'%}"
+        class="shape page-shape-1"
+        alt="Image"
+      />
+      <img
+        src="{%static 'assets/images/page-shape-2.png'%}"
+        class="shape page-shape-2"
+        alt="Image"
+      />
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Start About Us Area -->
+    <div class="about-area ptb-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-8">
+            <div class="about-img wow fadeInLeft delay-0-2s">
+              <img src="{%static 'assets/images/about-img.jpg'%}" alt="Image" />
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="about-content wow fadeInRight delay-0-2s">
+              <span class="top-title">Who We Are</span>
+              <h2>
+                We conduct all kinds of activities to get safe telehealth and
+                telemedicine at home.
+              </h2>
+              <p>
+                The project aims to support the 100 Million Health Initiative by
+                using artificial intelligence to identify diabetes, pressure,
+                and anemia diseases through the image of the patient's eye and
+                retina. and It provides support to doctors and reduces
+                overcrowding and the spread of diseases. It also provides health
+                instructions for the user, and a robot answers the patient’s
+                questions, recommends the patient to the nearest source of
+                health care to him (a doctor, pharmacy, or analysis laboratory).
+              </p>
+              <p>
+                In addition, there will be a bot that answers all the patient’s
+                questions related to his disease, and finally, the patient will
+                be able to upload his analyzes and medical history, where our
+                website will be It is a patient's personal health account.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End About Us Area -->
+
+    <!-- start new section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="row clearfix">
+          <!--Content Column-->
+          <div class="content-column col-md-6 col-sm-12 col-xs-12">
+            <div class="inner-column">
+              <div class="sec-title">
+                <div class="title">About Us</div>
+                <h2>
+                  We Are The Leader In <br />
+                  Facilitating Life
+                </h2>
+              </div>
+              <div class="text">
+                At the first we intended to eliminate the croweds and queues
+                that may cause more spreadding for the disease and also
+                eliminate the wasted time by saving it through our website
+              </div>
+              <div class="email">
+                Request Help:
+                <span class="theme_color">nichp@mohp.gov.eg</span>
+              </div>
+              <a href="{%url 'services'%}" class="theme-btn btn-style-three"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!--Image Column-->
+          <div class="image-column col-md-6 col-sm-12 col-xs-12">
+            <div
+              class="inner-column"
+              data-wow-delay="0ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="image">
+                <img src="{%static 'assets/images/crowd.png'%}" alt="" />
+                <div class="overlay-box">
+                  <div class="year-box">
+                    <span class="number">5</span>Years <br />
+                    Experience <br />
+                    Working
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end new section -->
+
+    <!-- Start Patients Area -->
+    <div class="patients-area pb-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="patients-content mr-15 wow fadeInLeft delay-0-2s">
+              <span class="top-title">How We Help Patients</span>
+              <h2>
+                We help patients with all the online-based services of 100
+                million health campaign.
+              </h2>
+
+              <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                  <ul class="next-uesed">
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Pay Less
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Quality Compared
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Share Documents Securely
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                  <ul>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Time Saved
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Very Fast
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Primary Care & Urgent Care
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="patients-img ml-15 wow fadeInRight delay-0-2s">
+              <img src="{%static 'assets/images/patients-img.png'%}" alt="Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Patients Area -->
+
+    {%endblock %}
+    <!-- END BLOCK CONTENT -->
+
+   
+    <!-- START BLOCK CONTENT -->
+    {% block extra_content1 %}
+    <script src="static/scripts/chat.js"></script>
+    {% endblock %}
+    <!-- END BLOCK CONTENT -->
+  </body>
+</html>

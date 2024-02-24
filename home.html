@@ -1,0 +1,490 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    
+    <!-- BLOCK1 -->
+    {% block content %}
+    <link rel="stylesheet" href="{%static 'static/css/chat.css'%}" />
+    <link rel="stylesheet" href="{%static 'static/css/home.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    {%endblock%}
+    <!-- END BLOCK1 -->
+
+   
+
+    <!-- BLOCK2 -->
+    {% block extra_content %}
+    <!-- Start Banner Area -->
+    <div class="banner-area bg-1 ptb-100">
+      <div class="container-fluid">
+        <div class="row align-items-end">
+          <div class="col-xl-7">
+            <div class="banner-content">
+              <span class="top-title wow fadeInUp delay-0-2s"
+                >Start Your Journey</span
+              >
+              <h1 class="wow fadeInUp delay-0-4s">
+                We provide Remote Health Care Services
+              </h1>
+              <p class="porttitor wow fadeInUp delay-0-6s">
+                The project aims to support the 100 Million Health Initiative by
+                using artificial intelligence to identify diabetes, pressure,
+                and anemia diseases through the image of the patient's eye and
+                retina.
+              </p>
+
+              <div class="banner-btn wow fadeInUp delay-0-8s">
+                <a href="{%url 'Diseases'%}" class="default-btn"> Get Started </a>
+                <a
+                  href="https://www.youtube.com/watch?v=e9iGF8rg1YM"
+                  class="video-btn popup-youtube"
+                >
+                  <i class="ri-play-fill"></i>
+                  <span>Watch Video</span>
+                </a>
+              </div>
+
+              <p class="question wow fadeInUp delay-0-1s">
+                Have question? <a href="{%url 'contact_us'%}">Please contact us</a>
+              </p>
+
+              <ul class="social wow fadeInUp delay-0-8s">
+                <li>
+                  <span>Social</span>
+                </li>
+                <li>
+                  <a href="https://facebook.com/" target="_blank">
+                    <i class="ri-facebook-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/" target="_blank">
+                    <i class="ri-twitter-line"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://linkedin.com/" target="_blank">
+                    <i class="ri-linkedin-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/" target="_blank">
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xl-5">
+            <div class="banner-img wow fadeInUp delay-0-6s">
+              <img
+                src="{%static 'assets/images/banner/banner-img-1.png'%}"
+                class="banner-img-1"
+                alt="Image"
+              />
+              <img
+                src="{%static 'assets/images/banner/banner-img-shape-1.png'%}"
+                class="banner-shape-1"
+                alt="Image"
+              />
+              <img
+                src="{%static 'assets/images/banner/banner-img-shape-2.png'%}"
+                class="banner-shape-2"
+                alt="Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Banner Area -->
+
+    <!-- Start What We Do Area -->
+    <div class="what-we-do-area pb-70">
+      <div class="container">
+        <div class="section-title wow fadeInUp delay-0-2s">
+          <h2>Some Advices</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-sm-6">
+            <div class="single-what-we-do wow fadeInUp delay-0-2s">
+              <img src="{%static 'assets/images/do/do-1.png'%}" alt="Image" />
+              <h3>Eat a balanced diet</h3>
+              <p>
+                lor Ensure that your diet includes a variety of fruits,
+                vegetables, whole grains, lean proteins, and healthy fats.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-sm-6">
+            <div class="single-what-we-do wow fadeInUp delay-0-4s">
+              <img src="{%static 'assets/images/do/do-2.png'%}" alt="Image" />
+              <h3>Exercise regularly</h3>
+              <p>
+                Aim for at least 30 minutes of moderate-intensity exercise most
+                days of the week. This can include activities like walking,
+                jogging, cycling, or swimming.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-sm-6">
+            <div class="single-what-we-do wow fadeInUp delay-0-6s">
+              <img src="{%static 'assets/images/do/do-3.png'%}" alt="Image" />
+              <h3>Get enough sleep</h3>
+              <p>
+                Most adults need between 7-8 hours of sleep per night to feel
+                rested and alert.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-sm-6">
+            <div class="single-what-we-do wow fadeInUp delay-0-8s">
+              <img src="{%static 'assets/images/do/do-4.png'%}" alt="Image" />
+              <h3>Manage stress</h3>
+              <p>
+                Find healthy ways to manage stress, such as meditation, yoga, or
+                deep breathing exercises.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End What We Do Area -->
+
+    <!-- Start What We Provide Area -->
+    <div class="what-we-provide-area pb-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="what-we-provide-img mr-15 wow fadeInLeft delay-0-6s">
+              <img src="{%static 'assets/images/what-we-provide-img.png'%}" alt="Image" />
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div
+              class="what-we-provide-content ml-15 wow fadeInRight delay-0-6s"
+            >
+              <h2>Some percentages for diseases</h2>
+              <p>
+                Resolves the disease by making online contact with patients.
+              </p>
+
+              <ul>
+                <li>
+                  <span>15%</span>
+                  of people have diabetes
+                </li>
+                <li>
+                  <span>35%</span>
+                  of adults have Hypertensive disease
+                </li>
+                <li>
+                  <span>25%</span>
+                  of children under five years of age and pregnant women suffer
+                  from anemia
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End What We Provide Area -->
+
+    <!-- Strat Services Area -->
+    <div class="services-area ptb-100">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center wow fadeInUp delay-0-2s"
+        >
+          <div class="section-title left-title">
+            <span class="top-title">More Info</span>
+            <h2>Our Services</h2>
+          </div>
+          <a href="{%url 'services'%}" class="read-more"> See All Services </a>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="services-slide owl-carousel owl-theme">
+          <div class="single-services-box wow fadeInUp delay-0-2s">
+            <i class="icon "><img width="94" height="94" src="data:image/png;base64,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"></i>
+            <h3>
+              <a href="{%url 'services'%}">
+                Diabetes
+              </a>
+            </h3>
+            <p>chronic health condition that occurs as a result of a deficiency
+              or resistance to the hormone insulin, and it may cause serious
+              complications such as cardiovascular, eye and kidney diseases.</p>
+            <a href="{%url 'services'%}" class="default-btn">
+              Read More
+            </a>
+          </div>
+
+          <div class="single-services-box wow fadeInUp delay-0-4s">
+            <i class="icon "><img width="94" height="94" src="data:image/png;base64,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"></i>
+            <h3>
+              <a href="{%url 'services'%}">
+                Hypertensive 
+              </a>
+            </h3>
+            <p>Severely high blood pressure is known as high systolic pressure
+              and may increase the risk of cardiovascular . It can be controlled
+              through medication and reducing salt in food.</p>
+            <a href="{%url 'services'%}" class="default-btn">
+              Read More
+            </a>
+          </div>
+
+          <div class="single-services-box wow fadeInUp delay-0-6s">
+            <i class="icon "><img width="94" height="94" src="data:image/png;base64,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"></i>
+            <h3>
+              <a href="{%url 'services'%}">
+                Anemia 
+              </a>
+            </h3>
+            <p>Hemoglobin deficiency in the blood is known as anemia, and it can
+              occur as a result of anemia, iron deficiency or vitamin B12
+              deficiency that you need body to make red blood
+              cells.</p>
+            <a href="{%url 'services'%}" class="default-btn">
+              Read More
+            </a>
+          </div>
+
+          <div class="single-services-box wow fadeInUp delay-0-1s">
+							
+            <i class="icon "><img width="94" height="94" src="data:image/png;base64,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"></i>
+            <h3>
+              <a href="{%url 'services'%}">
+                Chatbot
+              </a>
+            </h3>
+            <p>is a computer program that simulates human conversation, either written or spoken, using artificial intelligence and natural language processing.</p>
+            <a href="{%url 'services'%}" class="default-btn">
+              Read More
+            </a>
+          </div>
+
+          <div class="single-services-box wow fadeInUp delay-0-1s">
+            <i class="icon "><img  src="https://img.icons8.com/3d-fluency/94/location.png" alt="location"/></i>
+            <h3>
+              <a href="{%url 'services'%}">
+                Doctor location
+              </a>
+            </h3>
+            <p>it can help patients find doctors who are close to them. This can be especially important for people who live in rural areas or who have mobility issues.</p>
+            <a href="{%url 'services'%}" class="default-btn">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>	
+    </div>
+
+    <!-- End Services Area -->
+    
+    <!-- Start Patients Area -->
+    <div class="patients-area pb-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="patients-content mr-15 wow fadeInLeft delay-0-2s">
+              <span class="top-title">How We Help Patients</span>
+              <h2>
+                We help patients with all the online-based services of 100
+                million health campaign.
+              </h2>
+              
+
+              <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                  <ul class="next-uesed">
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Pay Less
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Quality Compared
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Share Documents Securely
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                  <ul>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Time Saved
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Very Fast
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Primary Care & Urgent Care
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="patients-img ml-15 wow fadeInRight delay-0-2s">
+              <img src="{%static 'assets/images/patients-img.png'%}" alt="Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Patients Area -->
+
+    <!-- Start Solutions Area -->
+    <div class="solutions-area pb-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="solutions-content wow fadeInLeft delay-0-2s">
+              <span class="top-title">Consumer Solutions</span>
+              <h2>Our platform provides solutions for some problems</h2>
+
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Improved Health Access
+                    </button>
+                  </h2>
+
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        Improved health access refers to the availability and
+                        accessibility of healthcare services to individuals or
+                        communities. This can include access to medical
+                        professionals, facilities, medications, and
+                        treatments.<a href="{%url 'contact_us'%}">Contact Us</a>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Clinical Data Management
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        refers to the process of collecting, storing, and
+                        managing clinical trial data in a systematic and
+                        organized manner.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      Dedicated Quality Assurance
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        refers to a systematic and ongoing process of ensuring
+                        that a product or service meets the desired level of
+                        quality.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="solutions-img wow fadeInRight delay-0-2s">
+              <img src="{%static 'assets/images/solutions-img.jpg'%}" alt="Image" />
+
+              <div class="play-button">
+                <a
+                  href="https://www.youtube.com/watch?v=PD-ucQ7EAl4"
+                  class="video-btn popup-youtube"
+                >
+                  <i class="ri-play-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Solutions Area -->
+
+    {%endblock %}
+    <!-- END BLOCK CONTENT -->
+
+   
+    <!-- START BLOCK CONTENT -->
+    {% block extra_content1 %}
+    <script src="static/scripts/chat.js"></script>
+    {% endblock %}
+    <!-- END BLOCK CONTENT -->
+  </body>
+</html>
