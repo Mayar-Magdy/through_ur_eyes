@@ -1,0 +1,10 @@
+# Ignore Django migrations
+migrations
+.vscode
+.env
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+Pipfile
+Pipfile.lock

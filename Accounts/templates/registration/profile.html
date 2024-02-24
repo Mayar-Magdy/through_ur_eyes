@@ -1,0 +1,175 @@
+
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+    <link rel="stylesheet" href="{%static 'static/css/chat.css'%}" />
+    <link rel="stylesheet" href="{%static 'static/css/home.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{%static 'assets/css/all.min.css'%}" />
+    <link rel="stylesheet" href="{%static 'assets/css/profile.css'%}" />
+    {%endblock%}
+    {% block extra_content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area">
+      <div class="container">
+        <div class="page-title-content wow fadeInUp delay-0-2s">
+          <h2>My Profile</h2>
+
+          <ul>
+            <li>
+              <a href="{%url 'home'%}"> Home </a>
+            </li>
+
+            <li class="active">Profile</li>
+          </ul>
+        </div>
+      </div>
+
+      <img
+        src="{%static 'assets/images/page-shape-1.png'%}"
+        class="shape page-shape-1"
+        alt="Image"
+      />
+      <img
+        src="{%static 'assets/images/page-shape-2.png'%}"
+        class="shape page-shape-2"
+        alt="Image"
+      />
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- start profile -->
+    <div>
+        <div>
+        <div class="container"5>                      
+           
+    <div class="icon5">
+        <img src="https://i.postimg.cc/WbvMm6kf/original-8.jpg" alt="icon image" /> </div>
+            
+        <div class=name5 >{{ request.user.username }}</div>
+        
+        
+        <form method="POST" action="{% url 'update_user' %}">
+          {% csrf_token %}
+          <div class="bio5">
+            <!-- Age: <span>21</span> -->
+            <h2>Edit Profile</h2>
+          </div>
+          <div class="inp-holder">
+            <div class="inp-container">
+              <input
+                class="inp-field inp-field1"
+                type="text"
+                placeholder="01122535612"
+                value="01122535612"
+                id="phone_number"
+                name="phone_number"
+              />
+              <span class="edit toggle1"
+                ><i class="fa-solid fa-pen-to-square toggle"></i
+              ></span>
+            </div>
+            <div class="inp-container">
+              <input
+                class="inp-field inp-field2"
+                type="email"
+                placeholder="anything@gmail.com"
+                value="mai@gmail.com"
+                id="email"
+                name="email"
+              />
+              <span class="edit toggle2"
+                ><i class="fa-solid fa-pen-to-square toggle"></i
+              ></span>
+            </div>
+            <div class="pass-container">
+              <input
+                class="inp-field inp-field3"
+                type="password"
+                placeholder="********"
+                value="12345678"
+                id="password"
+                name="password"
+              />
+              <span class="edit toggle3"
+                ><i class="fa-solid fa-pen-to-square toggle"></i
+              ></span>
+            </div>
+            <div class="pass-container">
+              <input
+                class="inp-field inp-field4"
+                type="password"
+                placeholder="********"
+                value="12345678"
+                id="new-pass"
+                name="new_password"
+              />
+              <span class="edit toggle4"
+                ><i class="fa-solid fa-pen-to-square toggle"></i
+              ></span>
+            </div>
+            <!-- <button class="btn btn-primary save-btn rounded-pill">Save</button> -->
+            <input
+              type="submit"
+              class="btn btn-primary save-btn rounded-pill"
+              value="Save"
+            />
+          </div>
+        </form>
+        
+        
+        <div class= "highlights5">
+            <ul class="ul5">
+            <li class="loc-caption5 li5">
+                <img id="loc1" src="https://i.postimg.cc/sfSYZ0vh/original-11.jpg" />
+                <p>resulut 1</p>
+                <blockquote>1/8/2001</blockquote>
+            </li>
+            <li class="loc-caption5 li5">
+                <img id="loc2" src="https://i.postimg.cc/sfSYZ0vh/original-11.jpg" />
+                <p>resulut 2</p>
+                <blockquote>1/8/2001</blockquote>
+            </li>
+            <li class="loc-caption5 li5">
+                <img id="loc3" src="https://i.postimg.cc/sfSYZ0vh/original-11.jpg" />
+                <p>resulut 3</p>
+                <blockquote>1/8/2001</blockquote>
+            </li>
+            <li class="loc-caption5 li5">
+                <img id="loc4" src="https://i.postimg.cc/sfSYZ0vh/original-11.jpg" />
+                <p>resulut 4</p>
+                <blockquote>1/8/2001</blockquote>
+            </li>
+            </ul>
+        </div>
+        
+        
+        
+        </div>
+    </div> 
+</div>
+<script></script>
+    <!-- end profile -->
+    {%endblock %}
+    <!-- end block2 -->
+
+   
+    <!-- START BLOCK CONTENT -->
+    {% block extra_content1 %}
+    <script src="{%static 'static/scripts/chat.js'%}"></script>
+    <script src="{%static 'assets/js/profile.js'%}"></script>
+    {% endblock %}
+    <!-- END BLOCK CONTENT -->
+  </body>
+</html>

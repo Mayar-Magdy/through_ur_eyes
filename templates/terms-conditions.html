@@ -1,0 +1,138 @@
+
+{% extends 'base.html' %}
+{% load static %}
+    <!-- BLOCK1 -->
+    {% block content %}
+    <link rel="stylesheet" href="{%static 'static/css/chat.css'%}" />
+    <link rel="stylesheet" href="{%static 'static/css/home.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    {%endblock%}
+    <!-- END BLOCK1 -->
+
+    
+
+    <!-- BLOCK2 -->
+    {% block extra_content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area">
+      <div class="container">
+        <div class="page-title-content">
+          <h2>Terms & Conditions</h2>
+
+          <ul>
+            <li>
+              <a href="{% url 'home' %}"> Home </a>
+            </li>
+
+            <li class="active">Terms & Conditions</li>
+          </ul>
+        </div>
+      </div>
+
+      <img
+        src="{%static 'assets/images/page-shape-1.png'%}"
+        class="shape page-shape-1"
+        alt="Image"
+      />
+      <img
+        src="{%static 'assets/images/page-shape-2.png'%}"
+        class="shape page-shape-2"
+        alt="Image"
+      />
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- End Terms & Conditions Area -->
+    <section class="ptb-100">
+      <div class="container">
+        <div class="main-content-text">
+          <h3>1. Acceptance of Terms:</h3>
+          <p>
+            Acceptance of Terms refers to the agreement of a user to abide by the terms and conditions of a website or service before being granted access to it. This means that the user must read and agree to the terms and conditions, usually by checking a box or clicking a button on the website, in order to use the service.
+          </p>
+
+          <div class="gap-20"></div>
+
+          <h3>2. Privacy Policy:</h3>
+          <p>
+            A Privacy Policy is a legal document that outlines how a website or organization collects, uses, stores, and protects user information. For healthcare websites, a privacy policy is particularly important given the sensitivity of the information being collected.
+          </p>
+          
+
+          <div class="gap-20"></div>
+
+          <h3>3. Medical Disclaimer</h3>
+          <p>
+            A Medical Disclaimer is a statement that is commonly included on healthcare websites to inform users that the information provided on the website is not intended to replace professional medical advice. It's important for healthcare websites to include a medical disclaimer to protect themselves from liability and to ensure that users understand the limitations of the information provided on the website.
+          </p>
+          <p>
+            The information provided on this website is for informational purposes only and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified healthcare provider with any questions you may have regarding a medical condition
+          </p>
+
+          <div class="gap-20"></div>
+
+          <h3>4. User Conduct:</h3>
+          <p>
+            User Conduct refers to the behavior expected of users while they are using a healthcare website. The User Conduct section of a website's Terms and Conditions typically outlines what actions are acceptable and what actions are prohibited while using the website.
+          </p>
+          <ul>
+            <li>
+              <i class="ri-check-line"></i>
+              Prohibited Activities: This section outlines activities that are not allowed on the website, such as hacking, spamming, or distributing malware.
+            </li>
+            <li>
+              <i class="ri-check-line"></i>
+              Use of Content: This section explains how users may use the content on the website, such as for personal or non-commercial use only.
+            </li>
+            <li>
+              <i class="ri-check-line"></i>
+              User-generated Content: This section outlines the rules for user-generated content, such as comments or reviews, and may include guidelines on language, tone, and relevance.
+            </li>
+            <li>
+              <i class="ri-check-line"></i>
+              Inappropriate Conduct: This section outlines behavior that is not allowed on the website, such as harassment, hate speech, or discrimination.
+            </li>
+          </ul>
+
+          <div class="gap-20"></div>
+
+          <h3>6. Changes to the Terms:</h3>
+          <p>
+            The Changes to the Terms section of a website's Terms and Conditions outlines the website owner's right to modify or update the terms and conditions at any time and how users will be notified of any changes.
+            A typical Changes to the Terms section may include the following:
+          </p>
+          <ul>
+            <li>
+              <i class="ri-check-line"></i>
+              Right to Modify: This section specifies that the website owner has the right to modify or update the terms and conditions at any time, without prior notice to users.
+            </li>
+            <li>
+              <i class="ri-check-line"></i>
+              Notice of Changes: This section outlines how users will be notified of any changes to the terms and conditions, such as by email or by posting a notice on the website.
+            </li>
+            <li>
+              <i class="ri-check-line"></i>
+              Acceptance of Changes: This section explains that continued use of the website after any changes to the terms and conditions will be considered acceptance of the modified terms.
+            </li>
+          </ul>
+
+          
+        </div>
+      </div>
+    </section>
+    <!-- End Terms & Conditions Area -->
+
+    {%endblock %}
+    <!-- END BLOCK CONTENT -->
+
+    
+    <!-- START BLOCK CONTENT -->
+    {% block extra_content1 %}
+    <script src="static/scripts/chat.js"></script>
+    {% endblock %}
+    <!-- END BLOCK CONTENT -->
+  </body>
+</html>

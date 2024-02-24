@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function handleImageUpload(event) {
+            var csrfToken = '{{ csrf_token }}';
+            var fileInput = event.target;
+            var file = fileInput.files[0];
+          
+            var formData = new FormData();
+            formData.append('image', file);
+          
+            fetch("i", {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(result => {
+                // قم بتعديل العناصر اللازمة في الصفحة بناءً على الـ result
+                console.log(result);
+                document.getElementById('result').textContent = JSON.stringify(result);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <input type="file" onchange="handleImageUpload(event)">
+    <div id="result"></div>
+</body>
+
+</html>

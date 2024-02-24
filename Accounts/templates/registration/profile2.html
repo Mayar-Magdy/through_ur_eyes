@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    <!-- BLOCK1 -->
+    {% block content %}
+    <link rel="stylesheet" href="{%static 'static/css/chat.css'%}" />
+    <link rel="stylesheet" href="{%static 'static/css/home.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{%static 'assets/css/all.min.css'%}" />
+    <link rel="stylesheet" href="{%static 'assets/css/profile2.css'%}" />
+    {%endblock%}
+    <!-- END BLOCK1 -->
+
+   
+
+    <!-- BLOCK2 -->
+    {% block extra_content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area">
+      <div class="container">
+        <div class="page-title-content wow fadeInUp delay-0-2s">
+          <h2>My Profile</h2>
+
+          <ul>
+            <li>
+<<<<<<< HEAD
+              <a href="{% url 'home'%}"> Home </a>
+=======
+              <a href="index-2.html"> Home </a>
+>>>>>>> 054841a07e7dee4fc756d8b9d27b65421b79ab72
+            </li>
+
+            <li class="active">Profile</li>
+          </ul>
+        </div>
+      </div>
+
+      <img
+        src="{%static 'assets/images/page-shape-1.png'%}"
+        class="shape page-shape-1"
+        alt="Image"
+      />
+      <img
+        src="{%static 'assets/images/page-shape-2.png'%}"
+        class="shape page-shape-2"
+        alt="Image"
+      />
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- start profile -->
+
+    <header>
+      <div class="container bg-profile">
+        <div class="profile">
+          <div class="profile-image">
+            <img
+              src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces"
+              alt=""
+            />
+          </div>
+
+          <div class="profile-user-settings">
+<<<<<<< HEAD
+            <h1 class="profile-user-name">{{ request.user.username }}</h1>
+
+            <!-- <button class="btn profile-edit-btn">Edit Profile</button> -->
+            <a href="{% url 'ii'%}" class="btn profile-edit-btn">Edit Profile</a>
+=======
+            <h1 class="profile-user-name">janedoe_</h1>
+
+            <!-- <button class="btn profile-edit-btn">Edit Profile</button> -->
+            <a href="profile.html" class="btn profile-edit-btn">Edit Profile</a>
+>>>>>>> 054841a07e7dee4fc756d8b9d27b65421b79ab72
+
+            <a
+              class="btn profile-settings-btn"
+              aria-label="profile settings"
+<<<<<<< HEAD
+              href="{% url 'home'%}"
+=======
+              href="profile.html"
+>>>>>>> 054841a07e7dee4fc756d8b9d27b65421b79ab72
+            >
+              <i class="fas fa-cog" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="profile-stats">
+            <ul class="p-0">
+<<<<<<< HEAD
+              <li><span class="profile-stat-count">Gender:</span> {{ request.user.gender }}</li>
+              <li><span class="profile-stat-count">City:</span> {{ request.user.city }}</li>
+=======
+              <li><span class="profile-stat-count">Gender:</span> Male</li>
+              <li><span class="profile-stat-count">City:</span> Fayoum</li>
+>>>>>>> 054841a07e7dee4fc756d8b9d27b65421b79ab72
+            </ul>
+          </div>
+
+          <div class="profile-bio">
+            <p>
+<<<<<<< HEAD
+              <span class="profile-real-name">{{ request.user.username }}</span> Lorem ipsum dolor
+=======
+              <span class="profile-real-name">Jane Doe</span> Lorem ipsum dolor
+>>>>>>> 054841a07e7dee4fc756d8b9d27b65421b79ab72
+              sit, amet consectetur adipisicing elit 📷✈️🏕️
+            </p>
+          </div>
+        </div>
+        <!-- End of profile section -->
+      </div>
+      <!-- End of container -->
+    </header>
+
+    <!-- start profile content -->
+    <div class="container">
+      <div class="card-cont-grid">
+        <!-- <div class="row"> -->
+<<<<<<< HEAD
+        {% if eye_images %}
+        {% for eye_image in eye_images %}
+        <div class="card_container">
+          <!-- <img src="{{ eye_image.image.url }}" alt="Eye image"> -->
+          <img
+            src="{{ eye_image.image.url }}"
+=======
+        <div class="card_container">
+          <img
+            src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces"
+>>>>>>> 054841a07e7dee4fc756d8b9d27b65421b79ab72
+            alt="Avatar"
+            class="card_imag"
+          />
+          <div class="vertical-line" style="height: 120px"></div>
+<<<<<<< HEAD
+          <h3 class="head-res">{{ eye_image.Result }}:</h3>
+          <p class="cause">{{ eye_image.disease }}</p>
+          <!-- <button class="botaost">hu3|hu3</button> -->
+          <p class="botaost">{{ eye_image.Date }}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <!-- </div> -->
+
+=======
+          <h3 class="head-res">Result:</h3>
+          <p class="cause">Dead From Sevier Anemia.</p>
+          <!-- <button class="botaost">hu3|hu3</button> -->
+          <p class="botaost">1/8/2001</p>
+        </div>
+        <div class="card_container">
+          <img
+            src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces"
+            alt="Avatar"
+            class="card_imag"
+          />
+          <div class="vertical-line" style="height: 120px"></div>
+          <h3 class="head-res">Result:</h3>
+          <p class="cause">Dead From Sevier Anemia.</p>
+          <!-- <button class="botaost">hu3|hu3</button> -->
+          <p class="botaost">1/8/2001</p>
+        </div>
+        <!-- </div> -->
+>>>>>>> 054841a07e7dee4fc756d8b9d27b65421b79ab72
+      </div>
+    </div>
+
+    <!-- end profile content -->
+
+    <!-- end profile -->
+    {%endblock %}
+    <!-- end block2 -->
+
+    <!-- START BLOCK CONTENT -->
+    {% block extra_content1 %}
+    <script src="static/scripts/chat.js"></script>
+    {% endblock %}
+    <!-- END BLOCK CONTENT -->
+  </body>
+</html>

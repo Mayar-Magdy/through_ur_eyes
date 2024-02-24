@@ -1,0 +1,87 @@
+<html>
+    <button
+            type="button"
+            class="btn btn-success btn-lg rounded-pill"
+            onclick="getLocation()"
+          >
+            Access Your Location
+          </button>
+          <form method="POST" >
+            {% csrf_token %}
+            <input type="text" id="latitude" name="latitude" />
+            <input type="text" id="longitude" name="longitude" />
+            <input type="submit" value="Submit">
+            
+          </form>
+    <!-- <form id="location-form"  method="post">
+        {% csrf_token %}
+        <input id="id_latitude" type="hidden" name="latitude">
+        <input id="id_longitude" type="hidden" name="longitude">
+        <input type="submit" value="Submit">
+        </form>
+        <script>
+        // Check if the browser supports geolocation
+        if (navigator.geolocation) {
+          // Get the current position of the user
+          navigator.geolocation.getCurrentPosition(function(position) {
+            // Set the latitude and longitude values in the form
+            document.getElementById("id_latitude").value = position.coords.latitude;
+            document.getElementById("id_longitude").value = position.coords.longitude;
+          });
+        } else {
+          // Handle the case when geolocation is not supported
+          alert("Geolocation is not supported by this browser.");
+        }
+        </script> -->
+        <script>
+           var x = document.getElementById("latitude");
+var z = document.getElementById("longitude");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.value =  position.coords.latitude;
+  z.value =  position.coords.longitude;
+  if (x.innerHTML != "") {
+    document.querySelector(".docs").style.display = "block";
+  }
+}
+        </script>
+<body>
+   {% for doctor in doctors %}
+   <p>الاسم: {{ doctor.name }}</p>
+   <p>المكان: {{ doctor.vicinity }}</p>
+   <p>التقييم: {{ doctor.rating }}</p>
+   <p>الحالة: {% if doctor.open_now == True %} مفتوح {% elif doctor.open_now == False %} مغلق {% else %} غير معروف {% endif %}</p>
+{% endfor %}
+
+   <!-- <h1>Fruits</h1> 
+   {% for fruit in fruits %} 
+   <p>{{ fruit }}</p>
+    {% endfor %}  -->
+   <!-- <ul>
+      {% for doctor in  doctors %}
+       <li>
+           <p>الاسم:{{ doctor}}</p>
+           <p>الموقع:{{ doctor.vicinity }}</p>
+           <p>التقييم:{{ doctor.rating }}</p>
+           <p>الحالة:{{ doctor.open_now }}</p>
+       </li>
+       <script>
+           // Print the doctor object in the console
+           console.log({ doctor });
+       </script>
+       {% endfor %}
+   </ul>
+    -->
+ 
+
+
+        </body>
+
+</html>

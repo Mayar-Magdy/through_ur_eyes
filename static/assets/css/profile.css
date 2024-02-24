@@ -1,0 +1,163 @@
+.container5 {
+  height: 300px;
+  width: 600px;
+}
+/* icon and username part */
+.icon5 {
+  text-align: center;
+}
+.icon5 img {
+  transition: 0.4s ease-out;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  border: 0px;
+  object-fit: cover;
+  padding: 0px;
+}
+
+.icon5 img:hover {
+  transform: scale(110%);
+  transition: transform 0.3s;
+  /* down here you can change the color of the pfp shade */
+  box-shadow: 0px 0px 60px #00ca99;
+  height: 120px;
+  width: 120px;
+  filter: saturate(150%);
+}
+
+.name5 {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.9px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: 200;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: lowercase;
+  text-transform: scale(110%);
+  text-transition: 0.4s ease-out;
+  text-align: center;
+  cursor: pointer;
+  width: fit-content;
+  margin: auto;
+}
+.name5:hover {
+  transform: scale(110%);
+  transition: transform 0.4s;
+  height: 24px;
+  filter: saturate(150%);
+  /* down here you can change the color of the text shade and the position of it */
+  text-shadow: 2px 2px 0px #00ca99, 2px 2px 0 #00ca99, 2px 3px 0 #00ca99,
+    0px 0px 0 #00ca99;
+}
+
+/* bio part */
+
+.bio5 {
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 13px;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  color: black;
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-align: center;
+  /* display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  column-gap: 60px; */
+}
+.bio5 span {
+  color: rgb(82, 151, 255);
+}
+.bio5 h2 {
+  color: #00ca99;
+}
+.inp-holder {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  /* column-gap: 60px; */
+  place-items: center;
+}
+.inp-container {
+  position: relative;
+  width: 300px;
+}
+.inp-field {
+  border: none;
+  border-bottom: 1px solid #fed049;
+  padding: 5px;
+  margin-bottom: 20px;
+  min-width: 300px;
+  outline: none;
+}
+.inp-field::placeholder {
+  color: #007580;
+  font-size: 18px;
+}
+.inp-field:focus {
+  border: none;
+  border-bottom: 1px solid #fed049;
+  padding: 5px;
+  margin-bottom: 20px;
+  min-width: 300px;
+  outline: none;
+}
+.pass-container {
+  position: relative;
+  width: 300px;
+}
+.toggle {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  color: #007580;
+  cursor: pointer;
+}
+/* input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+} */
+.save-btn {
+  position: relative;
+  left: 50%;
+  margin-top: 16px;
+  width: 120px;
+}
+.highlights5 img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 3px solid #d3d6db;
+  object-fit: cover;
+  padding: 0px;
+  img-spacing: 0px;
+}
+
+.loc-caption5:after {
+  content: attr(title);
+  display: block;
+}
+
+.ul5 {
+  text-align: center;
+  padding: 0;
+}
+
+.li5 {
+  width: 10%;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 100px;
+}
+
+.li5 img {
+  max-width: 100%;
+  height: auto;
+}

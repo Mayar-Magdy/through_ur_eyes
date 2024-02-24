@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+    <link rel="stylesheet" href="{%static 'static/css/chat.css'%}" />
+    <link rel="stylesheet" href="{%static 'static/css/home.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    {%endblock%}
+    <!-- END BLOCK1 -->
+
+   
+    <!-- BLOCK2 -->
+    {% block extra_content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area">
+      <div class="container">
+        <div class="page-title-content wow fadeInUp delay-0-2s">
+          <h2>Register</h2>
+
+          <ul>
+            <li>
+              <a href="{%url 'home'%}"> Home </a>
+            </li>
+
+            <li class="active">Register</li>
+          </ul>
+        </div>
+      </div>
+
+      <img
+        src="{% static 'assets/images/page-shape-1.png'%}"
+        class="shape page-shape-1"
+        alt="Image"
+      />
+      <img
+        src="{% static 'assets/images/page-shape-2.png'%}"
+        class="shape page-shape-2"
+        alt="Image"
+      />
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Start Register Area -->
+    <div class="register-area ptb-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="login-img mr-15 wow fadeInUp delay-0-2s">
+              <img
+                src="{% static 'assets/images/register-img.png'%}"
+                alt="Image"
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="login-register-content ml-15 wow fadeInUp delay-0-2s">
+              <h2>Signup</h2>
+              {% if error_message %}
+              <p>{{ error_message }}</p>
+              {% endif %}
+              <form method="POST" action="{% url 'home' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label>User name </label>
+                  <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    class="form-control"
+                    placeholder="Evan Edwards"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Phone Number </label>
+                  <input
+                    id="phone_number"
+                    name="phone_number"
+                    type="text"
+                    class="form-control"
+                    placeholder="01023451238"
+                    minlength="11"
+                    maxlength="11"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="national_number">National ID </label>
+                  <input
+                    id="national_number"
+                    name="national_number"
+                    type="text"
+                    class="form-control"
+                    placeholder="23465896238465"
+                    minlength="14"
+                    maxlength="14"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Gender </label> <br />
+                  <select
+                    id="gender"
+                    name="gender"
+                    placeholder="Select Gender"
+                    class="form-control"
+                    required
+                  >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Governorates </label> <br />
+                  <select
+                    id="city"
+                    name="city"
+                    placeholder="Select Gender"
+                    class="form-control"
+                    required
+                  >
+                    <option value="Alexandria">Alexandria</option>
+                    <option value="Assiut">Assiut</option>
+                    <option value="Aswan">Aswan</option>
+                    <option value="Beheira">Beheira</option>
+                    <option value="Bani Suef">Bani Suef</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Daqahliya">Daqahliya</option>
+                    <option value="Damietta">Damietta</option>
+                    <option value="Fayyoum">Fayyoum</option>
+                    <option value="Gharbiya">Gharbiya</option>
+                    <option value="Giza">Giza</option>
+                    <option value="Ismailia">Ismailia</option>
+                    <option value="Kafr El-Sheikh">Kafr El-Sheikh</option>
+                    <option value="Luxor">Luxor</option>
+                    <option value="Marsa Matrouh">Marsa Matrouh</option>
+                    <option value="Minya">Minya</option>
+                    <option value="Monofiya">Monofiya</option>
+                    <option value="New Valley">New Valley</option>
+                    <option value="North Sinai">North Sinai</option>
+                    <option value="South Sinai">South Sinai</option>
+                    <option value="Port Said">Port Said</option>
+                    <option value="Qulioubiya">Qulioubiya</option>
+                    <option value="Qena">Qena</option>
+                    <option value="Red Sea">Red Sea</option>
+                    <option value="Sharqiya">Sharqiya</option>
+                    <option value="Sohag">Sohag</option>
+                    <option value="Suez">Suez</option>
+                    <option value="Outside the Republic">
+                      Outside the Republic
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Date Of Birth</label>
+                  <input
+                    id="date_of_birth"
+                    name="date_of_birth"
+                    type="date"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="tefri@gmail.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    placeholder="*******************"
+                    minlength="8"
+                    required
+                  />
+                  <div
+                    id="pass-messege"
+                    style="
+                      font-size: 13px;
+                      color: red;
+                      font-style: italic;
+                      display: none;
+                    "
+                  >
+                    *Less Than 8 Characters
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Confirm Password</label>
+                  <input
+                    id="Confirm-password"
+                    name="Confirm-password"
+                    type="password"
+                    class="form-control"
+                    placeholder="*******************"
+                    minlength="8"
+                    required
+                  />
+                  <div
+                    id="conf-pass-messege"
+                    style="
+                      font-size: 13px;
+                      color: red;
+                      font-style: italic;
+                      display: none;
+                    "
+                  >
+                    *Not Identical To The Password
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <!-- <button type="submit" class="default-btn">Submit</button> -->
+                  <input type="submit" class="default-btn" />
+                </div>
+                <p>
+                  Already have an account? <a href="{% url 'login' %}">Login</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Register Area -->
+    {%endblock %}
+    <!-- END BLOCK2 -->
+
+   
+    <!-- BLOCK3 -->
+    {% block extra_content1 %}
+    <script src="{%static 'static/scripts/chat.js'%}"></script>
+    <script src="{%static 'assets/js/registration.js'%}"></script>
+    {% endblock %}
+    <!-- END BLOCK3 -->
+  </body>
+</html>

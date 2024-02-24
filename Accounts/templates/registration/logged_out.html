@@ -1,0 +1,498 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %} 
+    <link rel="stylesheet" href="{% static 'static/css/chat.css'%}"/>
+    <link rel="stylesheet" href="{% static 'static/css/home.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+{%endblock%}
+ 
+    {% block extra_content %} 
+    <!-- Start Banner Area -->
+    <div class="banner-area bg-1 ptb-100">
+      <div class="container-fluid">
+        <div class="row align-items-end">
+          <div class="col-xl-7">
+            <div class="banner-content">
+              <span class="top-title wow fadeInUp delay-0-2s"
+                >Start Your Journey</span
+              >
+              
+              <h1 class="wow fadeInUp delay-0-4s">
+                We provide Remote Health Care Services
+              </h1>
+              <p class="porttitor wow fadeInUp delay-0-6s">
+                The project aims to support the 100 Million Health Initiative by
+                using artificial intelligence to identify diabetes, pressure,
+                and anemia diseases through the image of the patient's eye and
+                retina.
+              </p>
+
+              <div class="banner-btn wow fadeInUp delay-0-8s">
+                <a href="diseases.html" class="default-btn"> Get Started </a>
+                <a
+                  href="https://www.youtube.com/watch?v=e9iGF8rg1YM"
+                  class="video-btn popup-youtube"
+                >
+                  <i class="ri-play-fill"></i>
+                  <span>Watch Video</span>
+                </a>
+              </div>
+
+              <p class="question wow fadeInUp delay-0-1s">
+                Have question? <a href="contact-us.html">Please contact us</a>
+              </p>
+
+              <ul class="social wow fadeInUp delay-0-8s">
+                <li>
+                  <span>Social</span>
+                </li>
+                <li>
+                  <a href="https://facebook.com/" target="_blank">
+                    <i class="ri-facebook-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/" target="_blank">
+                    <i class="ri-twitter-line"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://linkedin.com/" target="_blank">
+                    <i class="ri-linkedin-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/" target="_blank">
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xl-5">
+            <div class="banner-img wow fadeInUp delay-0-6s">
+              <img
+                src="{%static 'assets/images/banner/banner-img-1.png'%}"
+                class="banner-img-1"
+                alt="Image"
+              />
+              <img
+                src="{%static 'assets/images/banner/banner-img-shape-1.png'%}"
+                class="banner-shape-1"
+                alt="Image"
+              />
+              <img
+                src="{%static 'assets/images/banner/banner-img-shape-2.png'%}"
+                class="banner-shape-2"
+                alt="Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Banner Area -->
+
+    <!-- Start What We Do Area -->
+    <div class="what-we-do-area pb-70">
+      <div class="container">
+        <div class="section-title wow fadeInUp delay-0-2s">
+          <h2>Some Advices</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-sm-6">
+            <div class="single-what-we-do wow fadeInUp delay-0-2s">
+              <img src="{%static 'assets/images/do/do-1.png'%}" alt="Image" />
+              <h3>Eat a balanced diet</h3>
+              <p>
+                lor Ensure that your diet includes a variety of fruits,
+                vegetables, whole grains, lean proteins, and healthy fats.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-sm-6">
+            <div class="single-what-we-do wow fadeInUp delay-0-4s">
+              <img src="{%static 'assets/images/do/do-2.png'%}" alt="Image" />
+              <h3>Exercise regularly</h3>
+              <p>
+                Aim for at least 30 minutes of moderate-intensity exercise most
+                days of the week. This can include activities like walking,
+                jogging, cycling, or swimming.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-sm-6">
+            <div class="single-what-we-do wow fadeInUp delay-0-6s">
+              <img src="{%static 'assets/images/do/do-3.png'%}" alt="Image" />
+              <h3>Get enough sleep</h3>
+              <p>
+                Most adults need between 7-9 hours of sleep per night to feel
+                rested and alert.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-sm-6">
+            <div class="single-what-we-do wow fadeInUp delay-0-8s">
+              <img src="{%static 'assets/images/do/do-4.png'%}" alt="Image" />
+              <h3>Manage stress</h3>
+              <p>
+                Find healthy ways to manage stress, such as meditation, yoga, or
+                deep breathing exercises.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End What We Do Area -->
+
+    <!-- Start What We Provide Area -->
+    <div class="what-we-provide-area pb-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="what-we-provide-img mr-15 wow fadeInLeft delay-0-6s">
+              <img src="{%static 'assets/images/what-we-provide-img.png'%}" alt="Image" />
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div
+              class="what-we-provide-content ml-15 wow fadeInRight delay-0-6s"
+            >
+              <h2>Some percentages for diseases</h2>
+              <p>
+                Resolves the disease by making online contact with patients.
+              </p>
+
+              <ul>
+                <li>
+                  <span>15%</span>
+                  of people have diabetes
+                </li>
+                <li>
+                  <span>35%</span>
+                  of adults have Hypertensive disease
+                </li>
+                <li>
+                  <span>25%</span>
+                  of children under five years of age and pregnant women suffer
+                  from anemia
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End What We Provide Area -->
+
+    <!-- Strat Services Area -->
+    <div class="services-area ptb-100">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center wow fadeInUp delay-0-2s"
+        >
+          <div class="section-title left-title">
+            <span class="top-title">More Info</span>
+            <h2>Our Services</h2>
+          </div>
+          <a href="services.html" class="read-more"> See All Services </a>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="services-slide owl-carousel owl-theme">
+          <div class="single-services-box wow fadeInUp delay-0-2s">
+            <i class="shape flaticon-intestine"></i>
+            <i class="icon flaticon-intestine"></i>
+            <h3>
+              <a href="services.html"> Diabetes </a>
+            </h3>
+            <p>
+              chronic health condition that occurs as a result of a deficiency
+              or resistance to the hormone insulin, and it may cause serious
+              complications such as cardiovascular, eye and kidney diseases.
+            </p>
+            <a href="services.html" class="default-btn"> Read More </a>
+          </div>
+
+          <div class="single-services-box wow fadeInUp delay-0-4s">
+            <i class="shape flaticon-examination"></i>
+            <i class="icon flaticon-examination"></i>
+            <h3>
+              <a href="services.html"> Hypertensive disease </a>
+            </h3>
+            <p>
+              Severely high blood pressure is known as high systolic pressure,
+              and may increase the risk of cardiovascular and kidney disease. It
+              can be controlled through medication, smoking cessation and
+              reducing salt in food.
+            </p>
+            <a href="services.html" class="default-btn"> Read More </a>
+          </div>
+
+          <div class="single-services-box wow fadeInUp delay-0-6s">
+            <i class="shape flaticon-mental-health"></i>
+            <i class="icon flaticon-mental-health"></i>
+            <h3>
+              <a href="services.html"> Anemia disease </a>
+            </h3>
+            <p>
+              Hemoglobin deficiency in the blood is known as anemia, and it can
+              occur as a result of anemia, iron deficiency, or vitamin B12
+              deficiency and other vitamins that you need body to make red blood
+              cells.
+            </p>
+            <a href="services.html" class="default-btn"> Read More </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Services Area -->
+
+    <!-- Start Patients Area -->
+    <div class="patients-area pb-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="patients-content mr-15 wow fadeInLeft delay-0-2s">
+              <span class="top-title">How We Help Patients</span>
+              <h2>
+                We help patients with all the online-based services of 100
+                million health campaign.
+              </h2>
+              <p>
+                Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id
+                dui posuere blandit. Vestibulum ac diam sit amet vehicula
+                elementum.
+              </p>
+
+              <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                  <ul class="next-uesed">
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Pay Less
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Quality Compared
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Share Documents Securely
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                  <ul>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Time Saved
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Very Fast
+                    </li>
+                    <li>
+                      <i class="ri-checkbox-circle-line"></i>
+                      Primary Care & Urgent Care
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="patients-img ml-15 wow fadeInRight delay-0-2s">
+              <img src="{% static 'assets/images/patients-img.png'%}" alt="Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Patients Area -->
+
+    <!-- Start Solutions Area -->
+    <div class="solutions-area pb-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="solutions-content wow fadeInLeft delay-0-2s">
+              <span class="top-title">Consumer Solutions</span>
+              <h2>Our platform provides solutions for some problems</h2>
+
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Improved Health Access
+                    </button>
+                  </h2>
+
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        Improved health access refers to the availability and
+                        accessibility of healthcare services to individuals or
+                        communities. This can include access to medical
+                        professionals, facilities, medications, and
+                        treatments.<a href="contact.html">Contact Us</a>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Clinical Data Management
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        refers to the process of collecting, storing, and
+                        managing clinical trial data in a systematic and
+                        organized manner.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      Dedicated Quality Assurance
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        refers to a systematic and ongoing process of ensuring
+                        that a product or service meets the desired level of
+                        quality.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="solutions-img wow fadeInRight delay-0-2s">
+              <img src="{% static 'assets/images/solutions-img.jpg'%}" alt="Image" />
+
+              <div class="play-button">
+                <a
+                  href="https://www.youtube.com/watch?v=PD-ucQ7EAl4"
+                  class="video-btn popup-youtube"
+                >
+                  <i class="ri-play-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Solutions Area -->
+
+    <!-- Start Subscribe Area -->
+    <div class="subscribe-area">
+      <div class="container">
+        <div class="subscribe-bg bg-color-3270ff wow fadeInUp delay-0-2s">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="subscribe-content">
+                <h2>Subscribe to the updates!</h2>
+                <p>
+                  Sign up to our newsletter and be the first to know about the
+                  latest news.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="newsletter-wrap">
+                <form class="newsletter-form" data-toggle="validator">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your email address"
+                    name="EMAIL"
+                    required
+                    autocomplete="off"
+                  />
+
+                  <button class="default-btn" type="submit">Subscribe</button>
+
+                  <div id="validator-newsletter" class="form-result"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <img
+            src="{% static 'assets/images/subscribe-shape.png'%}"
+            class="subscribe-shape"
+            alt="Image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- End Subscribe Area -->
+    {%endblock %} 
+
+    {% block extra_content1 %} 
+    <script src="{% static 'static/scripts/chat.js'%}"></script>
+    {%endblock %} 
+  </body>
+</html>
